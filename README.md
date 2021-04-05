@@ -2,7 +2,6 @@
 
 ### Installation
 ```
-test
 ```
 
 ## Description
