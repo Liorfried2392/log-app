@@ -6,7 +6,7 @@ from flask_jwt import JWT
 
 from security import authenticate, identity
 from resources.user import UserRegister
-from resources.log import Log, LogsList
+from resources.log import Log, LogsListנ
 
 app = Flask(__name__)
 
