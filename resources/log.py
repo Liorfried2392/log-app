@@ -25,6 +25,11 @@ class Log(Resource):
                         required=True,
                         help="Every log needs a API KEY."
                         )
+    parser.add_argument('trigger_source',
+                        type=str,
+                        required=True,
+                        help="Every log needs a Trigger Source."
+                        )
 
     def post(self):
         data = Log.parser.parse_args()
