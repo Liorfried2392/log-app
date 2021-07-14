@@ -19,7 +19,7 @@ class LogModel(db.Model):
         self.trigger_source = trigger_source
 
     def json(self):
-        return {'date': self.date, 'spreadsheet_title': self.spreadsheet_title,'spreadsheet_id': self.spreadsheet_id ,'api_key': self.api_key,'trigger_source':self.trigger_source}
+        return {'date': self.date, 'spreadsheet_title': self.spreadsheet_title,'spreadsheet_id': self.spreadsheet_id ,'api_key': self.api_key,'trigger_source': self.trigger_source}
 
     def save_to_db(self):
         db.session.add(self)
