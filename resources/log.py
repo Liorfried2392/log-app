@@ -27,7 +27,7 @@ class Log(Resource):
                         )
     parser.add_argument('trigger_source',
                         type=str,
-                        required=True,
+                        required=False,
                         help="Every log needs a Trigger Source."
                         )
 
