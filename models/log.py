@@ -9,15 +9,17 @@ class LogModel(db.Model):
     spreadsheet_title = db.Column(db.String())
     spreadsheet_id = db.Column(db.String())
     api_key = db.Column(db.String())
+    trigger_source = db.Column(db.String())
 
     def __init__(self, date, spreadsheet_title, spreadsheet_id, api_key):
         self.date = date
         self.spreadsheet_title = spreadsheet_title
         self.spreadsheet_id = spreadsheet_id
         self.api_key = api_key
+        self.trigger_source = trigger_source
 
     def json(self):
-        return {'date': self.date, 'spreadsheet_title': self.spreadsheet_title,'spreadsheet_id': self.spreadsheet_id ,'api_key': self.api_key}
+        return {'date': self.date, 'spreadsheet_title': self.spreadsheet_title,'spreadsheet_id': self.spreadsheet_id ,'api_key': self.api_key,'trigger_source':self.trigger_source}
 
     def save_to_db(self):
         db.session.add(self)
