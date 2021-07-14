@@ -11,7 +11,7 @@ class LogModel(db.Model):
     api_key = db.Column(db.String())
     trigger_source = db.Column(db.String())
 
-    def __init__(self, date, spreadsheet_title, spreadsheet_id, api_key):
+    def __init__(self, date, spreadsheet_title, spreadsheet_id, api_key,trigger_source):
         self.date = date
         self.spreadsheet_title = spreadsheet_title
         self.spreadsheet_id = spreadsheet_id
