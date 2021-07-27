@@ -10,7 +10,7 @@ class LogModel(db.Model):
     spreadsheet_id = db.Column(db.String())
     api_key = db.Column(db.String())
     trigger_source = db.Column(db.String())
-    api_hits = db.Column(db.Integer())
+    api_hits = db.Column(db.String())
 
     def __init__(self, date, spreadsheet_title, spreadsheet_id, api_key,trigger_source,api_hits):
         self.date = date

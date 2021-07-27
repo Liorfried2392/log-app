@@ -30,8 +30,8 @@ class Log(Resource):
                         required=False,
                         help="Every log needs a Trigger Source."
                         )
-    parser.add_argument('trigger_source',
-                        type=int,
+    parser.add_argument('api_hits',
+                        type=str,
                         required=False,
                         help="Every log needs a API hits #."
                         )
