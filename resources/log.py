@@ -35,6 +35,11 @@ class Log(Resource):
                         required=False,
                         help="Every log needs a API hits #."
                         )
+    parser.add_argument('tsa_owner',
+                        type=str,
+                        required=False,
+                        help="Every log needs a TSA Owner."
+                        )
 
     def post(self):
         data = Log.parser.parse_args()
